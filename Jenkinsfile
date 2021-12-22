@@ -6,9 +6,9 @@ node() {
     checkout scm
   }
  stage('integrationArtifactUpdateConfiguration Command') {
-	  	 setupCommonPipelineEnvironment script: this
+	  	setupCommonPipelineEnvironment script: this
 		integrationArtifactGetMplStatus script: this
 	  	print "status:" 
-	  	print  commonPipelineEnvironment.getValue("iFlowMplStatus")
+	  	print  commonPipelineEnvironment.getValue("custom/integrationFlowMplStatus")
   }
 }
